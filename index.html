@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GridMap test</title>
+    <style>
+        body {
+            background-color: #444444;
+            text-align: center;
+        }
+
+        #grid {
+            background-color: white;
+            display: inline-grid;
+            background-image: url('/map_imgs/h3map.png');
+        }
+
+        .cell {
+            margin: 0px;
+            border: solid 1px transparent;
+            box-sizing: border-box;
+            height: 32px;
+            width: 32px;
+            grid-row: var(--cell-row);
+            grid-column: var(--cell-col);
+        }
+
+        .cell--empty {
+            border: 0;
+        }
+
+        .cell:hover {
+            /* border: dotted 1px rgba(0, 0, 0, 0.4);
+            border-style: solid;
+            border-top-color: #9E4400;
+            border-left-color: #873C00;
+            border-right-color: #723100;
+            border-bottom-color: #5B2600; */
+            cursor: pointer;
+            border-color:red;
+            /* box-sizing: border-box; */
+        }
+
+        .cell--taken{
+            background-image: url('cross_cursor.png');
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Map Grid</h1>
+    <main id="grid">
+
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>
