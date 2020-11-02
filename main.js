@@ -21,9 +21,15 @@ function Main() {
         for (let y = 0; y < gridSize; y++) {
             const gridCell = document.createElement('span');
             gridCell.classList.add('cell', `cell-${x}-${y}`);
+            if (x == 13 && y == 19) {
+                gridCell.classList.add(`cell--capturable`);
+                gridCell.addEventListener('click', ()=> {
+                    console.log('add gold +600');
+                });
+            }
             gridCell.style.setProperty('--cell-row', x + 1);
             gridCell.style.setProperty('--cell-col', y + 1);
-            gridCell.addEventListener('click', function(sender){
+            gridCell.addEventListener('click', function (sender) {
                 this.classList.add('cell--taken');
             });
             // const type = Math.floor((Math.random() * 1000) % cellType.length);

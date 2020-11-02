@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <base href="/" />
     <title>GridMap test</title>
     <style>
         body {
@@ -37,12 +38,16 @@
             border-right-color: #723100;
             border-bottom-color: #5B2600; */
             cursor: pointer;
-            border-color:red;
+            border-color: red;
             /* box-sizing: border-box; */
         }
 
-        .cell--taken{
+        .cell--taken {
             background-image: url('cross_cursor.png');
+        }
+
+        .cell--capturable:hover {
+            cursor: url('capture_cursor.png'), auto;
         }
     </style>
 </head>
